@@ -72,7 +72,7 @@ export default function ForAggregatorsOverviewPage() {
         {/* Bottom CTA Action Controls */}
         <div className="space-y-4 pt-2 text-center">
           <Link
-            href="/match-demo"
+            href="/dashboard/aggregator"
             className="w-full bg-[#c08223] hover:bg-[#a8701d] text-white font-bold py-3.5 px-6 rounded-xl transition-all duration-200 shadow-xs text-sm inline-flex items-center justify-center gap-2 group"
           >
             <span>Continue as Aggregation Agent</span>
