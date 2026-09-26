@@ -7,7 +7,7 @@ import { BiLeftArrowAlt } from "react-icons/bi";
 interface VerifyBatchFormProps {
   batch: BatchItem;
   onBack: () => void;
-  onFlag: () => void;
+  onFlag?: (reason?: string) => void;
   onComplete: (acceptedAmount: number) => void;
 }
 
