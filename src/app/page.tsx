@@ -18,7 +18,7 @@ export default function LandingPage() {
     <div className="min-h-screen bg-white font-sans text-gray-900 flex flex-col overflow-x-hidden">
      <Header/>
       {/* Hero Banner Section with Animations */}
-      <section className="relative w-full bg-[#14532d] text-white overflow-hidden h-full flex items-center">
+      <section className="relative w-full bg-[#14532d] text-white overflow-hidden h-full flex items-center mt-6">
         {/* Animated Glow Backlight Orbs */}
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl animate-pulse-glow pointer-events-none" />
         <div className="absolute top-1/2 left-1/3 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none" />
