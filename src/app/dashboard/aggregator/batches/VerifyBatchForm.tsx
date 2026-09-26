@@ -14,6 +14,7 @@ interface VerifyBatchFormProps {
 export default function VerifyBatchForm({
   batch,
   onBack,
+  onFlag,
   onComplete,
 }: VerifyBatchFormProps) {
   const [acceptedQty, setAcceptedQty] = useState<number>(24);
@@ -42,9 +43,10 @@ export default function VerifyBatchForm({
   };
 
   return (
-    <div className="space-y-6 max-w-2xl">
+    <div className="space-y-6 max-w-2xl font-sans text-gray-900">
       <button
         onClick={onBack}
+        type="button"
         className="inline-flex items-center gap-1 text-xs text-gray-500 hover:text-gray-800 font-semibold"
       >
         <BiLeftArrowAlt className="w-4 h-4" />
@@ -229,6 +231,15 @@ export default function VerifyBatchForm({
           >
             Mark batch VERIFIED — {acceptedQty} MT
           </button>
+          {onFlag && (
+            <button
+              type="button"
+              onClick={() => onFlag(verificationNotes || "Flagged during verification inspection.")}
+              className="w-full sm:w-auto bg-[#b45309] hover:bg-amber-800 text-white font-bold px-5 py-3.5 rounded-xl text-xs"
+            >
+              Flag for review instead
+            </button>
+          )}
           <button
             type="button"
             onClick={onBack}
