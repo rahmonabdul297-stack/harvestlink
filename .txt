@@ -1,0 +1,67 @@
+harvestlink/
+├── public/                     # Static assets (images, logos, icons)
+│   ├── farmer-hero.jpg
+│   └── favicon.ico
+│
+├── src/
+│   ├── app/                    # Next.js App Router (Routing Engine)
+│   │   ├── (auth)/             # Route Group: Standalone Auth Pages (NO Header/Navbar)
+│   │   │   ├── layout.tsx      # Fullscreen centered layout
+│   │   │   ├── page.tsx        # Registration / Register Page (Buyer, Farmer, Rider)
+│   │   │   ├── login/
+│   │   │   │   └── page.tsx    # Sign In Page
+│   │   │   └── verify-email/
+│   │   │       └── page.tsx    # 6-Digit OTP Verification Page
+│   │   │
+│   │   ├── (dashboard)/        # Route Group: Portal Views (WITH Header/Navbar & Sidebar)
+│   │   │   ├── layout.tsx      # Shared Dashboard Layout (Navbar, Sidebar)
+│   │   │   ├── buyer/
+│   │   │   │   └── page.tsx    # Buyer Portal (Post Demand, Run AI Match)
+│   │   │   ├── farmer/
+│   │   │   │   └── page.tsx    # Farmer Portal (Log Produce Batches, Prices)
+│   │   │   ├── rider/
+│   │   │   │   └── page.tsx    # Rider/Transporter Portal (Track Shipments)
+│   │   │   └── match-demo/
+│   │   │       └── page.tsx    # AI Matching Engine Interactive Demo Page
+│   │   │
+│   │   ├── api/                # Next.js Serverless Backend API Routes
+│   │   │   ├── auth/
+│   │   │   │   └── register/
+│   │   │   │       └── route.ts # POST /api/auth/register (User Creation)
+│   │   │   ├── match/
+│   │   │   │   └── route.ts    # POST /api/match (Runs AI Matching Algorithm)
+│   │   │   └── demand/
+│   │   │       └── route.ts    # GET/POST /api/demand (Buyer Order Management)
+│   │   │
+│   │   ├── favicon.ico
+│   │   ├── globals.css         # Tailwind CSS directives & custom utility classes
+│   │   └── layout.tsx          # Root Layout (HTML, Body, Global Font Wrappers)
+│   │
+│   ├── components/             # Reusable UI Components
+│   │   ├── logo.tsx            # HarvestLink Brand Logo
+│   │   ├── Header.tsx          # Main Application Navigation Bar
+│   │   ├── Sidebar.tsx         # Dashboard Sidebar Navigation
+│   │   └── ui/                 # Reusable Low-Level UI Components (Buttons, Inputs, Cards)
+│   │
+│   ├── lib/                    # Core Business Logic, Helpers & Database Setup
+│   │   ├── db.ts               # Database Connection Handler (MongoDB / Supabase)
+│   │   └── matchingEngine.ts   # Core AI / Scoring Matching Algorithm Logic
+│   │
+│   ├── models/                 # Mongoose Schemas or TypeScript Interfaces
+│   │   ├── User.ts             # Buyer, Farmer, Rider User Schema
+│   │   ├── Demand.ts           # Commodity Demand Schema
+│   │   └── Supply.ts           # Farmer Stock Batch Schema
+│   │
+│   └── types/                  # Global TypeScript Interfaces & Type Declarations
+│       └── index.ts
+│
+├── .env.local                  # Environment variables (DB URIs, API Secrets)
+├── next.config.ts              # Next.js Configuration
+├── package.json                # Project Dependencies & Scripts
+├── tailwind.config.ts          # Tailwind CSS Theme & Color Customizations
+└── tsconfig.json               # TypeScript Configuration (Path Alias @/*)
+
+
+
+
+
