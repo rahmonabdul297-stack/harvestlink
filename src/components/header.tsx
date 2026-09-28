@@ -16,6 +16,7 @@ export default function Header() {
     { name: "For Farmers", href: "/farmer" },
     { name: "Aggregation Agent", href: "/aggregator" },
     { name: "Logistics", href: "/logistic" },
+    { name: "Our Operations", href: "/operations" },
   ];
 
   return (

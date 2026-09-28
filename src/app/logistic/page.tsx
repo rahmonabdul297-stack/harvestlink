@@ -90,7 +90,7 @@ export default function ForLogisticsOverviewPage() {
         {/* Bottom CTA Action Controls */}
         <div className="space-y-4 pt-2 text-center">
           <Link
-            href="/rider"
+            href="/dashboard/rider"
             className="w-full bg-[#704628] hover:bg-[#57361f] text-white font-bold py-3.5 px-6 rounded-xl transition-all duration-200 shadow-xs text-sm inline-flex items-center justify-center gap-2 group"
           >
             <span>Continue as Logistics Partner</span>
